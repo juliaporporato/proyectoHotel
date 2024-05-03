@@ -1,0 +1,55 @@
+
+/*HEADER*/
+
+@mixin anclas {
+    text-decoration: none;
+    color: $color-fuentes;
+    font-size: 2rem;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    height: 10rem;
+    
+
+
+    .tituloEncabezado {
+        @include anclas;
+
+        i {
+            font-size: 10rem;
+            color: $color-fuentes;
+        }
+
+        h1 {
+            display: inline-block;
+            color: $color-fuentes;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+
+        li {
+            margin-right: 3rem;
+
+            a {
+                @include anclas;
+
+                &:hover {
+                    transition: all 0.3s ease;
+                    color: $color-fuente-secundario;
+                }
+            
+            }
+        }
+    }
+}
